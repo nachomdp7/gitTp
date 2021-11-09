@@ -67,28 +67,28 @@ use Models\Empresa as Empresa;
 
 
 
-        // public function Add($name, $countryOrigin, $direction,$description,$img)
-        // {
-        //     $empresa = new Empresa();
-        //     $empresa->setName($name);
+        public function Add()
+         {
+           $empresa = new Empresa();
 
-        //     // $empresa->setCountryOrigin($countryOrigin);
-        //     // $empresa->setDirection($direction);
-        //     // $empresa->setDescription($description);
-        //     // $empresa->setImg($img);
+            $empresa->setName($_POST['name']);
+            $empresa->setEmail($_POST['email']);
+            $empresa->setPasword($_POST['pasword']);
+            $empresa->setRole('company');
+             
 
-        //     $this->EmpresaDAO->Add($empresa);
-        //     $this->ShowAddView();
-        // }
+          $this->EmpresaDAO->Add($empresa);
+          $this->ShowAddView();
+         }
 
-        public function empresaValidation($nameEmpresa){
+        public function empresaValidation($idEmpresa){
      
             $empresaList = $this->EmpresaDAO->GetAll(); // tengo los 200 alumnos cargados en esta lista, comprobado!
             $cant = count($empresaList);
 
             for($i=0 ; $i<$cant; $i++) {
 
-                if($empresaList[$i]->getName() == $nameEmpresa){
+                if($empresaList[$i]->getName() == $idEmpresa){
                     $empresa = $empresaList[$i];
                     $this->ShowPerfilEmpresaViewActual($empresa); // si es correcto me lleva al perfil del student
                 }
@@ -97,16 +97,17 @@ use Models\Empresa as Empresa;
         }
 
 
-        public function empresaValidationAdmin($nameEmpresa){
+        public function empresaValidationAdmin($idEmpresa){
 
             $empresaList = $this->EmpresaDAO->GetAll(); // tengo los 200 alumnos cargados en esta lista, comprobado!
             $cant = count($empresaList);
 
             for($i=0 ; $i<$cant; $i++) {
-
-                 if($empresaList[$i]->getName() == $nameEmpresa){
+                echo "entro for";
+                 if($empresaList[$i]->getIdEmpresa() == $idEmpresa){
                     $empresa = $empresaList[$i];
                     $this->ShowPerfilEmpresaViewActualAdmin($empresa);
+                    echo "entro";
                 }              
             }
             
@@ -127,7 +128,7 @@ use Models\Empresa as Empresa;
                 }
         }
 
-        public function removeEmpresaAdmin($nameEmpresa){
+        public function removeEmpresa($idEmpresa){
 
             $empresaList = $this->EmpresaDAO->GetAll();
 
@@ -136,10 +137,10 @@ use Models\Empresa as Empresa;
             $flag = false;
             while($i < $cant && $flag == false){
 
-                if($empresaList[$i]->getName() == $nameEmpresa){
+                if($empresaList[$i]->getidEmpresa() == $idEmpresa){
                     $flag = true;
-                    $aux = $i;
-                    $this->EmpresaDAO->RemoveData($aux);
+                    $aux=$empresaList[$i]->getIdEmpresa();
+                    $this->AdminDAO->removeEmpresaAdmin($aux);
                 }
                 $i++;
             }

@@ -10,10 +10,9 @@ require_once('nav.php');
                <h2 class="mb-4">Listado de empresas</h2>
                <table class="table bg-light-alpha">
                     <thead>
-                         <th>Nombre</th>
-                         <th>PaisOrigen</th>
-                         <th>Direccion</th>
-                         <th>Descripcion</th>
+                         <th>Id de empresa</th>
+                          <th>Nombre</th>
+                         
                     </thead>
                     <tbody>
                          <?php
@@ -21,11 +20,9 @@ require_once('nav.php');
                               {
                                    ?>
                                         <tr>
-                                             <td> <a href="<?php echo FRONT_ROOT?>Empresa/empresaValidationAdmin?nameEmpresa=<?php echo $empresa->getName()?>"><?php echo $empresa->getName() ?></a> </td>
-                                             <td><?php echo $empresa->getCountryOrigin() ?></td>
-                                             <td><?php echo $empresa->getDirection() ?></td>
-                                             <td><?php echo $empresa->getDescription() ?></td>
-                                         </tr>
+                                        <td> <a href="<?php echo FRONT_ROOT?>Empresa/empresaValidationAdmin?idEmpresa=<?php echo $empresa->getIdEmpresa()?>"><?php echo $empresa->getIdEmpresa() ?></a> </td>
+                                        <td><?php echo $empresa->getName() ?></td>
+                                       </tr>
                                    <?php
                               }
                          ?>

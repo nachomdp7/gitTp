@@ -13,13 +13,14 @@
                          <th>Id</th>
                          <th>Apellido</th>
                          <th>Nombre</th>
+                         <th>Id de carrera</th>
                          <th>Dni</th>
-                         <th>Numero Telefono</th>
+                         <th>Numero de archivo</th>
                          <th>Genero</th>
                          <th>Fecha nacimiento</th>
-                         <th>Email</th>
-                         <th>Numero de Archivo</th>
+                         <th>Numero telefonico</th>
                          <th>Activo</th>
+                         <th>Email</th>
 
                     </thead>
                     <tbody>
@@ -27,17 +28,17 @@
                               foreach($studentList as $student)
                               {
                                    ?>
-                                        <tr>
-                                             <td><?php echo $student->getStudentId() ?></td>
-                                             <td><?php echo $student->getLastName() ?></td>
+                                        <tr> <td> <a href="<?php echo FRONT_ROOT?>Admin/StudentValidationAdmin?studentId=<?php echo $student->getStudentId()?>"><?php echo $student->getStudentId() ?></a> </td>
                                              <td><?php echo $student->getFirstName() ?></td>
+                                             <td><?php echo $student->getLastName() ?></td>
+                                             <td><?php echo $student->getCareerId() ?></td>
                                              <td><?php echo $student->getDni() ?></td>
-                                             <td><?php echo $student->getPhoneNumber() ?></td>
+                                             <td><?php echo $student->getFileNumber() ?></td>
                                              <td><?php echo $student->getGender() ?></td>
                                              <td><?php echo $student->getBirthDate() ?></td>
-                                             <td><?php echo $student->getEmail() ?></td>
-                                             <td><?php echo $student->getFileNumber() ?></td>
+                                             <td><?php echo $student->getPhoneNumber() ?></td>
                                              <td><?php echo $student->getActive() ?></td>
+                                             <td><?php echo $student->getEmail() ?></td>
 
 
                                         </tr>

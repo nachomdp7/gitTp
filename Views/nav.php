@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
      <span class="navbar-text">
 
-     <a href="<?php echo FRONT_ROOT ?>Student/ShowLoginView"></a>
-          <strong> Cerrar Sesion</strong>
-     </span>
+     <a class="navbar-brand" href="<?php echo FRONT_ROOT ?>Student/ShowLoginView"> <strong>Cerrar Sesion</strong> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
  
 
      <ul class="navbar-nav ml-auto">

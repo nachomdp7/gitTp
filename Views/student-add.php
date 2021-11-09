@@ -8,14 +8,8 @@
      <section id="listado" class="mb-5">
           <div class="container ">
                <h2 class="mb-4">Agregar alumno</h2>
-               <form action="<?php echo FRONT_ROOT ?>Student/Add" method="post" class="bg-light-alpha p-5 shadow">
+               <form action="<?php echo FRONT_ROOT ?>Student/Add" method="POST" class="bg-light-alpha p-5 shadow">
                     <div class="row">                         
-                         <div class="col-lg-4">
-                              <div class="form-group">
-                                   <label for="">Legajo</label>
-                                   <input type="text" name="studentId" value="" class="form-control">
-                              </div>
-                         </div>
                          <div class="col-lg-4">
                               <div class="form-group">
                                    <label for="">Nombre</label>
@@ -30,14 +24,20 @@
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">dni</label>
-                                   <input type="text" name="dni" value="" class="form-control">
+                                   <label for="">id de Carrera</label>
+                                   <input type="number" name="careerId" value="" class="form-control">
                               </div>
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">Numero Telefono</label>
-                                   <input type="number" name="phoneNumber" value="" class="form-control">
+                                   <label for="">dni</label>
+                                   <input type="number" name="dni" value="" class="form-control">
+                              </div>
+                         </div>
+                         <div class="col-lg-4">
+                              <div class="form-group">
+                                   <label for="">Numero de telefono</label>
+                                   <input type="text" name="phoneNumber" value="" class="form-control">
                               </div>
                          </div>
                          <div class="col-lg-4">
@@ -48,7 +48,7 @@
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">Fecha nacimiento</label>
+                                   <label for="">Fecha de nacimiento</label>
                                    <input type="date" name="birthDate" value="" class="form-control">
                               </div>
                          </div>
@@ -60,14 +60,22 @@
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
+                                   <label for="">Contraseña</label>
+                                   <input type="text" name="pasword" value="" class="form-control">
+                              </div>
+                         </div>
+                         <div class="col-lg-4">
+                              <div class="form-group">
                                    <label for="">Numero de Archivo</label>
                                    <input type="number" name="fileNumber" value="" class="form-control">
                               </div>
                               <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">Activo</label>
+                                   <label for="">Activo (1=SI,0=NO) </label>
                                    <input type="" name="active" value="" class="form-control">
                               </div>
+                              
+                             
                          </div>
                     </div>
                     <button type="submit" class="btn btn-dark ml-auto d-block">Agregar</button>

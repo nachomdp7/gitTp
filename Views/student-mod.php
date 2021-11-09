@@ -15,12 +15,14 @@
 
 <body>
 
+
+<!-- <a class="navbar-brand" href="<?php echo FRONT_ROOT ?>Student/ShowLoginView"> <strong>Cerrar Sesion</strong> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark mb-5">
-    <a class="navbar-brand" href="<?php
-
-use Models\Empresa;
-
-echo FRONT_ROOT ?>Student/ShowLoginView"> <strong>Cerrar Sesion</strong> </a>
+    <a class="navbar-brand" href="<?php echo FRONT_ROOT ?>Student/ShowLoginView"> <strong>Cerrar Sesion</strong> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -72,43 +74,79 @@ echo FRONT_ROOT ?>Student/ShowLoginView"> <strong>Cerrar Sesion</strong> </a>
                 </div>
                 
 
-
-                <form action="<?php echo FRONT_ROOT?>Empresa/ModifyEmpresaAdmin" method="POST"> 
-                <div class="col-8">
+                <form action="<?php echo FRONT_ROOT?>Admin/modStudentAdmin" method="POST"> 
+                  
+                   <div class="col-8">
 
                     <div class="form-group row">
                         <div class="col-8">
-                        <input type="hidden" name="oldName" value="<?php echo $empresa->getName() ?>" class="form-control" >
+                        <input type="hidden" name="studentId" value="<?php echo $student->getStudentId() ?>" class="form-control" >
+                        
+                        </div>
+                    </div>
+                   
+
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Nombre</label>
+                        <div class="col-8">
+                        <input type="text" name="firstName" value= "<?php echo $student->getFirstName() ?>" class="form-control">
                         </div>
                     </div>
 
-
                     <div class="form-group row">
-                        <label for="apellido" class="col-4">Nombre nuevo</label>
+                        <label for="apellido" class="col-4">Apellido</label>
                         <div class="col-8">
-                        <input type="text" name="name" value= "<?php echo $empresa->getName() ?>" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="apellido" class="col-4">Direccion nueva</label>
-                        <div class="col-8">
-                        <input type="text" name="direction" value="<?php echo $empresa->getDirection() ?>" class="form-control">
+                        <input type="text" name="lastName" value="<?php echo $student->getLastName() ?>" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="apellido" class="col-4">Pais de origen nuevo</label>
+                        <label for="apellido" class="col-4">Id de carrera</label>
                         <div class="col-8">
-                        <input type="text" name="countryOrigin" value="<?php echo $empresa->getCountryOrigin() ?>" class="form-control">
+                        <input type="text" name="careerId" value="<?php echo $student->getCareerId() ?>" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="apellido" class="col-4">Descripcion nueva</label>
+                        <label for="apellido" class="col-4">DNI</label>
                         <div class="col-8">
-                        <input type="text" name="description" value="<?php echo $empresa->getDescription() ?>" class="form-control">
+                        <input type="text" name="dni" value="<?php echo $student->getDni() ?>" class="form-control">
                         </div>
                     </div>
-
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Numero archivo</label>
+                        <div class="col-8">
+                        <input type="text" name="fileNumber" value="<?php echo $student->getFileNumber() ?>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Genero</label>
+                        <div class="col-8">
+                        <input type="text" name="gender" value="<?php echo $student->getGender() ?>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Fecha de nacimiento</label>
+                        <div class="col-8">
+                        <input type="text" name="birthdate" value="<?php echo $student->getBirthDate() ?>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Numero de telefono</label>
+                        <div class="col-8">
+                        <input type="text" name="phoneNumber" value="<?php echo $student->getPhoneNumber() ?>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Esta activo? TRUE OR FALSE </label>
+                        <div class="col-8">
+                        <input type="text" name="active" value="<?php echo $student->getActive() ?>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="apellido" class="col-4">Email</label>
+                        <div class="col-8">
+                        <input type="text" name="email" value="<?php echo $student->getEmail() ?>" class="form-control">
+                        </div>
+                    </div>
                   
 
                     <!-- <div class="form-group text center">

@@ -27,7 +27,7 @@ class StudentController
 
         public function ShowAddView()
         {
-            require_once(VIEWS_PATH."perfil-admin.php");
+            require_once(VIEWS_PATH."student-add.php");
         }
 
         public function ShowListView()
@@ -73,31 +73,42 @@ class StudentController
             require_once(VIEWS_PATH."register.php");
         }
 
+       
+    
 
 
 
 
-
-        public function Add($studentId, $firstName, $lastName,$dni,$phoneNumber,$gender,$birthDate,$email,$active,$fileNumber)
+        public function Add()
         {
             // $alert = new Alert("","");
 
             try{
+                $studentList=$this->studentDAO->GetAll();
+                $cant=count($studentList);
                 $student = new Student();
-                $student->setStudentId($studentId);
-                $student->setfirstName($firstName);
-                $student->setLastName($lastName);
-                $student->setDni($dni);
-                $student->setPhoneNumber($phoneNumber);
-                $student->setGender($gender);
-                $student->setBirthDate($birthDate);
-                $student->setEmail($email);
-                $student->setActive($active);
-                $student->setFilenumber($fileNumber);
-
-                $this->stuAdentDO->Add($student);
+                echo "enttre";
+                $student->setStudentId($_POST['studentId']);
+                echo "sigo";
+                var_dump($_POST['lastName']);
+                $student->setfirstName($_POST['firstName']);
+                echo "sigo";
+                $student->setLastName($_POST['lastName']);
+                $student->setCareerId($_POST['careerId']);
+                $student->setDni($_POST['dni']);
+                $student->setPhoneNumber($_POST['phoneNumber']);
+                $student->setGender($_POST['gender']);
+                $student->setBirthDate($_POST['birthDate']);
+                $student->setEmail($_POST['email']);
+                $student->setActive($_POST['active']);
+                $student->setPasword($_POST['pasword']);
+                $student->setFilenumber($_POST['fileNumber']);
+                $student->setRole("user");
+                var_dump($student);
+                $this->studentDAO->Add($student);
             }catch(Exception $ex){
                 // $alert->setType("danger");
+                throw $ex;
                 // $alert->setMessage($ex->getMessage());
             }finally{
                 $this->ShowAddView();

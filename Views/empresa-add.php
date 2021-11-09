@@ -24,28 +24,25 @@ require_once('nav.php');
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">Pais origen</label>
-                                   <input type="text" name="countryOrigin" value="" class="form-control">
+                                   <label for="">Email</label>
+                                   <input type="email" name="email" value="" class="form-control">
                               </div>
                          </div>
                          <div class="col-lg-4">
                               <div class="form-group">
-                                   <label for="">Direccion</label>
-                                   <input type="text" name="direction" value="" class="form-control">
+                                   <label for="">Contraseña</label>
+                                   <input type="text" name="pasword" value="" class="form-control">
                               </div>
                          </div>
-                         <div class="col-lg-4">
+                        
+                        
+                         <!-- <div class="col-lg-4">
                               <div class="form-group">
                                    <label for="">Descripcion</label>
                                    <input type="text" name="description" value="" class="form-control">
                               </div>
-                         </div>
-                         <div class="col-lg-4">
-                              <div class="form-group">
-                                   <label for="">URL de imagen</label>
-                                   <input type="text" name="img" value="" class="form-control">
-                              </div>
-                         </div>
+                         </div> -->
+                         
                     </div>
                     <button type="submit" class="btn btn-dark ml-auto d-block">Agregar</button>
                </form>

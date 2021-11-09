@@ -66,7 +66,7 @@ poder eliminar o modificar las ofertas laborales de dicha empresa -->
                 <div class="row  pt-4"> 
                     <div class="col-4">
                         <img class="img-tumbnaill"src="https://cdn2.iconfinder.com/data/icons/website-icons/512/User_Avatar-512.png"alt=""width="150px"height="150px">
-                        <p><a class="btn btn-danger btn-sm col-12 mt-5" href="<?php echo FRONT_ROOT?>Empresa/removeEmpresaAdmin?nameEmpresa=<?php echo $empresa->getName()?>">Eliminar &raquo;</a></p>
+                        <p><a class="btn btn-danger btn-sm col-12 mt-5" href="<?php echo FRONT_ROOT?>Empresa/removeEmpresa?idEmpresa=<?php echo $empresa->getidEmpresa()?>">Eliminar &raquo;</a></p>
                         <p><a class="btn btn-primary btn-sm col-12 " href="<?php echo FRONT_ROOT?>Empresa/empresaModAdmin?nameEmpresa=<?php echo $empresa->getName()?>">Modificar &raquo;</a></p>
                         
                     </div>
@@ -74,9 +74,9 @@ poder eliminar o modificar las ofertas laborales de dicha empresa -->
                     <div class="col-8">
 
                          <div class="form-group row">
-                            <label for="nombre" class= "col-4">Nombre</label>
+                            <label for="nombre" class= "col-4">Id de la empresa</label>
                             <div class="col-8">
-                            <label for=""> <?php echo $empresa->getName() ?></label>
+                            <label for=""> <?php echo $empresa->getIdEmpresa() ?></label>
 
 
                                 <label for=""></label>
@@ -84,21 +84,9 @@ poder eliminar o modificar las ofertas laborales de dicha empresa -->
                         </div>
 
                         <div class="form-group row">
-                            <label for="apellido" class="col-4">Direccion</label>
+                            <label for="apellido" class="col-4">Nombre </label>
                             <div class="col-8">
-                            <label for=""><?php echo $empresa->getDirection() ?></label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="apellido" class="col-4">Pais de origen</label>
-                            <div class="col-8">
-                            <label for=""><?php echo $empresa->getCountryOrigin() ?></label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="apellido" class="col-4">Descripcion</label>
-                            <div class="col-8">
-                            <label for=""><?php echo $empresa->getDescription() ?></label>
+                            <label for=""><?php echo $empresa->getName() ?></label>
                             </div>
                         </div>
 

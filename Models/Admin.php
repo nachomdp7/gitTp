@@ -7,7 +7,6 @@ class Admin extends User{
     private $idAdmin;
     private $name;
     
-
     public function __construct()
     {
 

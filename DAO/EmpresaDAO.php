@@ -124,7 +124,8 @@ use DAO\Connection as Connection;
                 foreach ($resultSet as $row)
                 {                
                     $empresa = new Empresa();
-                    $empresa->setName($row["name"]);
+                    $empresa->setIdEmpresa($row['idCompany']);
+                    $empresa->setName($row["nameC"]);
                     $empresa->setEmail($row["email"]);
                     array_push($empresaList, $empresa);
                 }
@@ -136,6 +137,8 @@ use DAO\Connection as Connection;
                 throw $ex;
             }
         }
+
+       
 
         private function SaveData()
         {

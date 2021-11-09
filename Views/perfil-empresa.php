@@ -76,39 +76,10 @@
                         <div class="form-group row">
                             <label for="nombre" class= "col-4">Nombre</label>
                             <div class="col-8">
-                            <label for=""> <?php echo $empresa->getName() ?></label>
+                          <label for=""> <?php echo $empresa->getName() ?></label>
                             
 
-                                <!-- <label for=""></label>
-                            </div>
-                        </div>
-
-                        <hr style="color: #0056b2;" />
-
-                        <div class="form-group row">
-                            <label for="apellido" class="col-4">Direccion</label>
-                            <div class="col-8">
-                            <label for=""><?php echo $empresa->getDirection() ?></label>
-                            </div>
-                        </div>
-
-                        <hr style="color: #0056b2;" />
-
-                        <div class="form-group row">
-                            <label for="apellido" class="col-4">Pais de origen</label>
-                            <div class="col-8">
-                            <label for=""><?php echo $empresa->getCountryOrigin() ?></label>
-                            </div>
-                        </div>
-
-                        <hr style="color: #0056b2;" />
-
-                        <div class="form-group row">
-                            <label for="apellido" class="col-4">Descripcion</label>
-                            <div class="col-8">
-                            <label for=""><?php echo $empresa->getDescription() ?></label>
-                            </div>
-                        </div> -->
+                            
 
                         <hr style="color: #0056b2;" />
                        

@@ -91,8 +91,8 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading"><?php echo $empresa->getName()?></h2>
-        <p class="lead"><?php echo $empresa->getDescription()?></p>
-        <p><a class="btn btn-secondary" href="<?php echo FRONT_ROOT?>Empresa/empresaValidation?nameEmpresa=<?php echo $empresa->getName()?>">View details &raquo;</a></p>
+        <!-- <p class="lead"><?php echo $empresa->getDescription()?></p> -->
+        <p><a class="btn btn-secondary" href="<?php echo FRONT_ROOT?>Empresa/empresaValidation?idEmpresa=<?php echo $empresa->getIdEmpresa()?>">View details &raquo;</a></p>
       </div>
       <div class="col-md-5 text-align-center">
         <!-- <img class="rounded-circle text-align-center " width="200px" height="200px" src="https://i1.wp.com/www.ebizlatam.com/wp-content/uploads/2019/06/Logo-Globant.jpg?fit=510%2C374" alt=""> -->
